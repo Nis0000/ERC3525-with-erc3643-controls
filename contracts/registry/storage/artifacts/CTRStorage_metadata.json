@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"stateVariables": {
+				"__gap": {
+					"details": "This empty reserved space is put in place to allow future versions to add new variables without shifting down storage in the inheritance chain."
+				},
+				"_claimTopics": {
+					"details": "All required Claim Topics"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts t-rex/registry/storage/CTRStorage.sol": "CTRStorage"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 10
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts t-rex/registry/storage/CTRStorage.sol": {
+			"keccak256": "0xee2fc57419e8455c167ae9dbbca946b16456353161933f94fb9403beaf06a95b",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://59a52f39f953cf35f2e6d2036e97a657be534d7131f10901c434e542aa643fd7",
+				"dweb:/ipfs/QmYRTVatp8oqBUjU4Kah8ZmRnjo1EJ8V7qJFowbJJ117dB"
+			]
+		}
+	},
+	"version": 1
+}

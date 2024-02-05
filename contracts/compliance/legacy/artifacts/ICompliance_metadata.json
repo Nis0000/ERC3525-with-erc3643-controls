@@ -1,0 +1,357 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_agentAddress",
+						"type": "address"
+					}
+				],
+				"name": "TokenAgentAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_agentAddress",
+						"type": "address"
+					}
+				],
+				"name": "TokenAgentRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					}
+				],
+				"name": "TokenBound",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					}
+				],
+				"name": "TokenUnbound",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_agentAddress",
+						"type": "address"
+					}
+				],
+				"name": "addTokenAgent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					}
+				],
+				"name": "bindToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "canTransfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "created",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "destroyed",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_agentAddress",
+						"type": "address"
+					}
+				],
+				"name": "isTokenAgent",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					}
+				],
+				"name": "isTokenBound",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_agentAddress",
+						"type": "address"
+					}
+				],
+				"name": "removeTokenAgent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferred",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					}
+				],
+				"name": "unbindToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addTokenAgent(address)": {
+					"details": "adds an agent to the list of token agents",
+					"params": {
+						"_agentAddress": "address of the agent to be added  Emits a TokenAgentAdded event"
+					}
+				},
+				"bindToken(address)": {
+					"details": "binds a token to the compliance contract",
+					"params": {
+						"_token": "address of the token to bind  Emits a TokenBound event"
+					}
+				},
+				"canTransfer(address,address,uint256)": {
+					"details": "checks that the transfer is compliant.  default compliance always returns true  READ ONLY FUNCTION, this function cannot be used to increment  counters, emit events, ...",
+					"params": {
+						"_amount": "The amount of tokens involved in the transfer",
+						"_from": "The address of the sender",
+						"_to": "The address of the receiver"
+					}
+				},
+				"created(address,uint256)": {
+					"details": "function called whenever tokens are created  on a wallet  this function can update state variables in the compliance contract  these state variables being used by `canTransfer` to decide if a transfer  is compliant or not depending on the values stored in these state variables and on  the parameters of the compliance smart contract",
+					"params": {
+						"_amount": "The amount of tokens involved in the transfer",
+						"_to": "The address of the receiver"
+					}
+				},
+				"destroyed(address,uint256)": {
+					"details": "function called whenever tokens are destroyed  this function can update state variables in the compliance contract  these state variables being used by `canTransfer` to decide if a transfer  is compliant or not depending on the values stored in these state variables and on  the parameters of the compliance smart contract",
+					"params": {
+						"_amount": "The amount of tokens involved in the transfer",
+						"_from": "The address of the receiver"
+					}
+				},
+				"isTokenAgent(address)": {
+					"details": "Returns true if the Address is in the list of token agents",
+					"params": {
+						"_agentAddress": "address of this agent"
+					}
+				},
+				"isTokenBound(address)": {
+					"details": "Returns true if the address given corresponds to a token that is bound with the Compliance contract",
+					"params": {
+						"_token": "address of the token"
+					}
+				},
+				"removeTokenAgent(address)": {
+					"details": "remove Agent from the list of token agents",
+					"params": {
+						"_agentAddress": "address of the agent to be removed (must be added first)  Emits a TokenAgentRemoved event"
+					}
+				},
+				"transferred(address,address,uint256)": {
+					"details": "function called whenever tokens are transferred  from one wallet to another  this function can update state variables in the compliance contract  these state variables being used by `canTransfer` to decide if a transfer  is compliant or not depending on the values stored in these state variables and on  the parameters of the compliance smart contract",
+					"params": {
+						"_amount": "The amount of tokens involved in the transfer",
+						"_from": "The address of the sender",
+						"_to": "The address of the receiver"
+					}
+				},
+				"unbindToken(address)": {
+					"details": "unbinds a token from the compliance contract",
+					"params": {
+						"_token": "address of the token to unbind  Emits a TokenUnbound event"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"events": {
+				"TokenAgentAdded(address)": {
+					"notice": "this event is emitted when the Agent has been added on the allowedList of this Compliance.  the event is emitted by the Compliance constructor and by the addTokenAgent function  `_agentAddress` is the address of the Agent to add"
+				},
+				"TokenAgentRemoved(address)": {
+					"notice": "this event is emitted when the Agent has been removed from the agent list of this Compliance.  the event is emitted by the Compliance constructor and by the removeTokenAgent function  `_agentAddress` is the address of the Agent to remove"
+				},
+				"TokenBound(address)": {
+					"notice": "this event is emitted when a token has been bound to the compliance contract  the event is emitted by the bindToken function  `_token` is the address of the token to bind"
+				},
+				"TokenUnbound(address)": {
+					"notice": "this event is emitted when a token has been unbound from the compliance contract  the event is emitted by the unbindToken function  `_token` is the address of the token to unbind"
+				}
+			},
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts t-rex/compliance/legacy/ICompliance.sol": "ICompliance"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 10
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts t-rex/compliance/legacy/ICompliance.sol": {
+			"keccak256": "0x32f4f43d7e8bebd9459a8202badbb97e72d9ab3bfd15a9754b9d3a4fca063268",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://f716bf3a5b71ec018cbdfa07f3377f057098587045c89f321fb7eb081d6c9338",
+				"dweb:/ipfs/QmUrytbfeWzwdx3VEbBbAttrste7P7bLatY25EbfrBjSiw"
+			]
+		}
+	},
+	"version": 1
+}

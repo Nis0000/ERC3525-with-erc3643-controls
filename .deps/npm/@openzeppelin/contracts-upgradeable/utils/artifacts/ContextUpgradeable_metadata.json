@@ -1,0 +1,90 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "InvalidInitialization",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "NotInitializing",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint64",
+						"name": "version",
+						"type": "uint64"
+					}
+				],
+				"name": "Initialized",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"details": "Provides information about the current execution context, including the sender of the transaction and its data. While these are generally available via msg.sender and msg.data, they should not be accessed in such a direct manner, since when dealing with meta-transactions the account sending and paying for execution may not be the actual sender (as far as an application is concerned). This contract is only required for intermediate, library-like contracts.",
+			"errors": {
+				"InvalidInitialization()": [
+					{
+						"details": "The contract is already initialized."
+					}
+				],
+				"NotInitializing()": [
+					{
+						"details": "The contract is not initializing."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/npm/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": "ContextUpgradeable"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/npm/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+			"keccak256": "0x65315805c3cddf140325ec9d7cf45cfca17b73b4680d1401e0869e63f4d4eebd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://06ab79ad2381ae0dcbd1fa902630d2cf024c586f885bb7d54fd6e0ed93c22325",
+				"dweb:/ipfs/QmYtzBU3tiEHPh68xFdxLGc5PJtxiH8RHmchx1hzwcRhZT"
+			]
+		},
+		".deps/npm/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+			"keccak256": "0xdaecaa981ac8b1d77c4942c691cbeb71971a0fa2a0adba07e2f2d75da8ca2fd9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c1596acf548eb5b52b95c684f8913729cdb04102ce76e3203c1831fa2dc6dfb3",
+				"dweb:/ipfs/QmYQM9sizfJu613HW3UL52CUe6pxC3osc4bfJRyD1p8SWc"
+			]
+		}
+	},
+	"version": 1
+}

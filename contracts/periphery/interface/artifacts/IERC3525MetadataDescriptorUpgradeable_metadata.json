@@ -1,0 +1,97 @@
+{
+	"compiler": {
+		"version": "0.8.21+commit.d9974bed"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "constructContractURI",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "slot",
+						"type": "uint256"
+					}
+				],
+				"name": "constructSlotURI",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "constructTokenURI",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/periphery/interface/IERC3525MetadataDescriptorUpgradeable.sol": "IERC3525MetadataDescriptorUpgradeable"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/periphery/interface/IERC3525MetadataDescriptorUpgradeable.sol": {
+			"keccak256": "0xa40c93b0968840218c1febb1d73c1fc6cfa5f40786f1c4e3115674f997733089",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9bfbb5541c22bce8a4312eb8fd6488afd6d2c281e29b4dd39e9417214caabe30",
+				"dweb:/ipfs/QmetZ6ioQ68taJrQ89GJTbctMZRCFJtZ5m7tBAZ5556GvZ"
+			]
+		}
+	},
+	"version": 1
+}

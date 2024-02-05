@@ -1,0 +1,642 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "InvalidInitialization",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "NotInitializing",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "OwnableInvalidOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "OwnableUnauthorizedAccount",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint64",
+						"name": "version",
+						"type": "uint64"
+					}
+				],
+				"name": "Initialized",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					}
+				],
+				"name": "ModuleAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					}
+				],
+				"name": "ModuleInteraction",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					}
+				],
+				"name": "ModuleRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					}
+				],
+				"name": "TokenBound",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					}
+				],
+				"name": "TokenUnbound",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					}
+				],
+				"name": "addModule",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					}
+				],
+				"name": "bindToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "callData",
+						"type": "bytes"
+					},
+					{
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					}
+				],
+				"name": "callModuleFunction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "canTransfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "created",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "destroyed",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getModules",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTokenBound",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "init",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					}
+				],
+				"name": "isModuleBound",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					}
+				],
+				"name": "removeModule",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "transferred",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					}
+				],
+				"name": "unbindToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"errors": {
+				"InvalidInitialization()": [
+					{
+						"details": "The contract is already initialized."
+					}
+				],
+				"NotInitializing()": [
+					{
+						"details": "The contract is not initializing."
+					}
+				],
+				"OwnableInvalidOwner(address)": [
+					{
+						"details": "The owner is not a valid owner account. (eg. `address(0)`)"
+					}
+				],
+				"OwnableUnauthorizedAccount(address)": [
+					{
+						"details": "The caller account is not authorized to perform an operation."
+					}
+				]
+			},
+			"events": {
+				"Initialized(uint64)": {
+					"details": "Triggered when the contract has been initialized or reinitialized."
+				},
+				"ModuleInteraction(address,bytes4)": {
+					"details": "Event emitted for each executed interaction with a module contract.  For gas efficiency, only the interaction calldata selector (first 4  bytes) is included in the event. For interactions without calldata or  whose calldata is shorter than 4 bytes, the selector will be `0`."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"addModule(address)": {
+					"details": "See {IModularCompliance-addModule}."
+				},
+				"bindToken(address)": {
+					"details": "See {IModularCompliance-bindToken}."
+				},
+				"callModuleFunction(bytes,address)": {
+					"details": "see {IModularCompliance-callModuleFunction}."
+				},
+				"canTransfer(address,address,uint256)": {
+					"details": "See {IModularCompliance-canTransfer}."
+				},
+				"created(address,uint256)": {
+					"details": "See {IModularCompliance-created}."
+				},
+				"destroyed(address,uint256)": {
+					"details": "See {IModularCompliance-destroyed}."
+				},
+				"getModules()": {
+					"details": "See {IModularCompliance-getModules}."
+				},
+				"getTokenBound()": {
+					"details": "See {IModularCompliance-getTokenBound}."
+				},
+				"isModuleBound(address)": {
+					"details": "See {IModularCompliance-isModuleBound}."
+				},
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"removeModule(address)": {
+					"details": "See {IModularCompliance-removeModule}."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				},
+				"transferred(address,address,uint256)": {
+					"details": "See {IModularCompliance-transferred}."
+				},
+				"unbindToken(address)": {
+					"details": "See {IModularCompliance-unbindToken}."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"events": {
+				"ModuleAdded(address)": {
+					"notice": "this event is emitted when a module has been added to the list of modules bound to the compliance contract  the event is emitted by the addModule function  `_module` is the address of the compliance module"
+				},
+				"ModuleRemoved(address)": {
+					"notice": "this event is emitted when a module has been removed from the list of modules bound to the compliance contract  the event is emitted by the removeModule function  `_module` is the address of the compliance module"
+				},
+				"TokenBound(address)": {
+					"notice": "this event is emitted when a token has been bound to the compliance contract  the event is emitted by the bindToken function  `_token` is the address of the token to bind"
+				},
+				"TokenUnbound(address)": {
+					"notice": "this event is emitted when a token has been unbound from the compliance contract  the event is emitted by the unbindToken function  `_token` is the address of the token to unbind"
+				}
+			},
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/compliance/modular/ModularCompliance.sol": "ModularCompliance"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@onchain-id/solidity/contracts/interface/IClaimIssuer.sol": {
+			"keccak256": "0xe378bb9e7e0635a3a000eef935f294a682966f57916dab5a3839db56dad3ed3f",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://96ee9e42f6f71836d6607b81ad056877c9f913072709553661e9057531a16e00",
+				"dweb:/ipfs/QmVijmQYQadzMWo1cdB15CqkZ9fEzaasaCT6dK45mjmFj1"
+			]
+		},
+		"@onchain-id/solidity/contracts/interface/IERC734.sol": {
+			"keccak256": "0x25245bd5dd6c63a5b0bed6775f3fccc96f6442c8bddea0c6911dcfeb19cbbd84",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a001352aa5e335b2fab132f4e6890c776c1f8b8fc29b3f47964aefc8d5a8111f",
+				"dweb:/ipfs/QmSvjHWvfkENTG8E9o2jBKHhBmA3uS9CUpDftUUEEB3NBY"
+			]
+		},
+		"@onchain-id/solidity/contracts/interface/IERC735.sol": {
+			"keccak256": "0xfb10392ac5337c3655a41e03b0ae59c264d5e64553900a406a27e2d171c81160",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://b6ac84c040f19cb3acb0879789591a6624c28c1b9373c73afaa3764581bcbf86",
+				"dweb:/ipfs/QmPkPHfQYQ3dnZwan5wtKn3NiYeWvv2wGgxyhpjA1ozGAn"
+			]
+		},
+		"@onchain-id/solidity/contracts/interface/IIdentity.sol": {
+			"keccak256": "0xbfe9fac64c461c2131a8f56a8ddd7f6480ffbf2e511bf5daecd08c13447341e5",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://efe46b0b476da3405bcfec631779f16b0e2a407ce7414270a0655db7aca49c82",
+				"dweb:/ipfs/QmZZohm9SQb3N7Nx4PZWahM2BEk15tbC2hsWQFneZ7vMvw"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
+			"keccak256": "0xf702b0c3a7ccdae8bb7b1265c9bb536ce4051311d82b1b44b94a43bfbe130818",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3de77c5e3f4ac02518481cb21e907f5f1fd5bb8f3f3c6c880fdb193afc006c77",
+				"dweb:/ipfs/QmXXrLgxyDswm4zjz27GvGRZQWcWg8Tpu8ANvrmDk5q1sW"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+			"keccak256": "0x65315805c3cddf140325ec9d7cf45cfca17b73b4680d1401e0869e63f4d4eebd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://06ab79ad2381ae0dcbd1fa902630d2cf024c586f885bb7d54fd6e0ed93c22325",
+				"dweb:/ipfs/QmYtzBU3tiEHPh68xFdxLGc5PJtxiH8RHmchx1hzwcRhZT"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+			"keccak256": "0xdaecaa981ac8b1d77c4942c691cbeb71971a0fa2a0adba07e2f2d75da8ca2fd9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c1596acf548eb5b52b95c684f8913729cdb04102ce76e3203c1831fa2dc6dfb3",
+				"dweb:/ipfs/QmYQM9sizfJu613HW3UL52CUe6pxC3osc4bfJRyD1p8SWc"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x85d4a401f8ac7c9af48b5a3eb5fd15cf428a1db1d1284461909087e9dd3ebbfd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://533fc26c06bd02fb0619a739e1456cd1b60cb8f7fe71549400dd217159f5472c",
+				"dweb:/ipfs/QmQrq8LLEeK2Rm2mCARCx4thRrHvpr1XJuPqEm2fqdwkuP"
+			]
+		},
+		"contracts/compliance/modular/IModularCompliance.sol": {
+			"keccak256": "0x36003f47ded8204deaffca6c11741460b84b9008c8c2eca2100a6ef6da30b395",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a5e7944271c20a9db7d9e4f50d0731a15add172707bac2d38f77902418031ebf",
+				"dweb:/ipfs/QmT2d7veXon2BkFZBseoHf8vxg4h9ZCeeYnjj36W7mqguh"
+			]
+		},
+		"contracts/compliance/modular/MCStorage.sol": {
+			"keccak256": "0x101f66350d20f110612365ac909d09b2ce4ba6e60292dd9848dbaa82088a2028",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://83f9eb3b4e4cd4d614ce4d98c52e1da27faccac134b8c03d7d0974a8d9e85a88",
+				"dweb:/ipfs/QmUg475v34VSmP93W9BWRTRYkXciWbMKAhe1zkZp62x4Xf"
+			]
+		},
+		"contracts/compliance/modular/ModularCompliance.sol": {
+			"keccak256": "0xc63f0f866ec6a7f678a48c15da561a5ad2e398cf94f0c81a6b9ec325c879bed7",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://b813dd8a0e273eeb64744fbe3aab2316fa58d9f099a0d3e512430f434a317ef4",
+				"dweb:/ipfs/QmcSrc6jgAQZcauJ6yjJfPUq2Ln7mutgyWohLBPpNNUY4F"
+			]
+		},
+		"contracts/compliance/modular/modules/IModule.sol": {
+			"keccak256": "0x393c3a7c6ff7c87b64cb84f0591c09bf6e6a6177b64985451420326d525b1181",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://abd7f45ff0aa717b61208dfd9ca1084dfd8d3c5842287f3e67c558a33934714c",
+				"dweb:/ipfs/QmdEpgJ7wjT5ETXjLmk9w5QCSZzH6XKuF7cZ3Au3MNNck6"
+			]
+		},
+		"contracts/registry/interface/IClaimTopicsRegistry.sol": {
+			"keccak256": "0x38b0aabb71cce9fdb7b9671d4adf0e0e49aa3d4bb7a4997cc317215557737361",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://84a76932e4443e4de6a8f957a596c0a64e7b3bf33330be91a5a9d320e58dfbf7",
+				"dweb:/ipfs/QmSNNbU7HEmHKEq9S9RRti9U3chfvcCwLQtcwiJoEbN28K"
+			]
+		},
+		"contracts/registry/interface/IIdentityRegistry.sol": {
+			"keccak256": "0xd66c0af9c2c3f158ab3f2b7786200a6c3df5307b707c1f68704a5258822d8c16",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://fda53d7c3d68780ac70403d4b3dda419a11bddbd97825d7527532303336a0e99",
+				"dweb:/ipfs/QmXRLVwiaFbqhtk9KRrEPfVrr3kWjsZZML1kv7uF92o4EB"
+			]
+		},
+		"contracts/registry/interface/IIdentityRegistryStorage.sol": {
+			"keccak256": "0xbc61e2f22ca029c5f11b96629299e84f6100c50ff6a12039ff2b48e39ab14290",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://5a8d130587c15c9b47d16bddbda1f8884b7724a1837ac88a5561e5ce24da2ab9",
+				"dweb:/ipfs/QmZ4X4FxAfCi1bMxageVHBfkFfGQ4j9wfbaWyoVCTQ8hfy"
+			]
+		},
+		"contracts/registry/interface/ITrustedIssuersRegistry.sol": {
+			"keccak256": "0x707217e46b227228e0e21be8bc21a9293a9159a6017b54078a8f58b6c77d74a0",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://8a5a0614540d3a7d23c4fc9550e69299556e9c84528abec339e2510e0317ed2e",
+				"dweb:/ipfs/QmUJ7yA7NRmnSGtvu4ePP62SrPZBVAto9RULnZjoFuApCs"
+			]
+		},
+		"contracts/token/IToken.sol": {
+			"keccak256": "0xcdc566408cf08ff1f548f1518a1034d3a90ae0335c56641c8ca6ffc79025d51e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://6edaa89a0aea0ecee06342fffac6b9d638297d41a6c7ae34d96eafa54bef969f",
+				"dweb:/ipfs/QmSuAaZxnohpxC3MTfSrfzuZPamYuGMwBARNwfDXy5Eox9"
+			]
+		}
+	},
+	"version": 1
+}

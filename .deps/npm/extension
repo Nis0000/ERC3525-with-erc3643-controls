@@ -1,0 +1,8 @@
+/**
+ * Minified by jsDelivr using Terser v5.15.1.
+ * Original file: /npm/extension@0.2.2/module.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+function sleepySays(e,s){return s?"(◡ ‿ ◡ ✿) zZZz":`( o ‿ ~ ✿) ${e}`}module.exports=sleepySays;
+//# sourceMappingURL=/sm/b9e04605bdc09dff8de0efbc4721bac782612a649feb57e41ee3a3d1ed84984a.map

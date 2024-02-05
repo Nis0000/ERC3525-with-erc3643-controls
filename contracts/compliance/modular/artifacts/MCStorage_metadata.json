@@ -1,0 +1,50 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"stateVariables": {
+				"__gap": {
+					"details": "This empty reserved space is put in place to allow future versions to add new variables without shifting down storage in the inheritance chain."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/compliance/modular/MCStorage.sol": "MCStorage"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/compliance/modular/MCStorage.sol": {
+			"keccak256": "0x101f66350d20f110612365ac909d09b2ce4ba6e60292dd9848dbaa82088a2028",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://83f9eb3b4e4cd4d614ce4d98c52e1da27faccac134b8c03d7d0974a8d9e85a88",
+				"dweb:/ipfs/QmUg475v34VSmP93W9BWRTRYkXciWbMKAhe1zkZp62x4Xf"
+			]
+		}
+	},
+	"version": 1
+}

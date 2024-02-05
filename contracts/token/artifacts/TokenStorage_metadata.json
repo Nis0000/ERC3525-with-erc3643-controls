@@ -1,0 +1,137 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"stateVariables": {
+				"__gap": {
+					"details": "This empty reserved space is put in place to allow future versions to add new variables without shifting down storage in the inheritance chain."
+				},
+				"_balances": {
+					"details": "ERC20 basic variables"
+				},
+				"_frozen": {
+					"details": "Variables of freeze and pause functions"
+				},
+				"_tokenCompliance": {
+					"details": "Compliance contract linked to the onchain validator system"
+				},
+				"_tokenIdentityRegistry": {
+					"details": "Identity Registry contract used by the onchain validator system"
+				},
+				"_tokenName": {
+					"details": "Token information"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/token/TokenStorage.sol": "TokenStorage"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@onchain-id/solidity/contracts/interface/IClaimIssuer.sol": {
+			"keccak256": "0xe378bb9e7e0635a3a000eef935f294a682966f57916dab5a3839db56dad3ed3f",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://96ee9e42f6f71836d6607b81ad056877c9f913072709553661e9057531a16e00",
+				"dweb:/ipfs/QmVijmQYQadzMWo1cdB15CqkZ9fEzaasaCT6dK45mjmFj1"
+			]
+		},
+		"@onchain-id/solidity/contracts/interface/IERC734.sol": {
+			"keccak256": "0x25245bd5dd6c63a5b0bed6775f3fccc96f6442c8bddea0c6911dcfeb19cbbd84",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a001352aa5e335b2fab132f4e6890c776c1f8b8fc29b3f47964aefc8d5a8111f",
+				"dweb:/ipfs/QmSvjHWvfkENTG8E9o2jBKHhBmA3uS9CUpDftUUEEB3NBY"
+			]
+		},
+		"@onchain-id/solidity/contracts/interface/IERC735.sol": {
+			"keccak256": "0xfb10392ac5337c3655a41e03b0ae59c264d5e64553900a406a27e2d171c81160",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://b6ac84c040f19cb3acb0879789591a6624c28c1b9373c73afaa3764581bcbf86",
+				"dweb:/ipfs/QmPkPHfQYQ3dnZwan5wtKn3NiYeWvv2wGgxyhpjA1ozGAn"
+			]
+		},
+		"@onchain-id/solidity/contracts/interface/IIdentity.sol": {
+			"keccak256": "0xbfe9fac64c461c2131a8f56a8ddd7f6480ffbf2e511bf5daecd08c13447341e5",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://efe46b0b476da3405bcfec631779f16b0e2a407ce7414270a0655db7aca49c82",
+				"dweb:/ipfs/QmZZohm9SQb3N7Nx4PZWahM2BEk15tbC2hsWQFneZ7vMvw"
+			]
+		},
+		"contracts/compliance/modular/IModularCompliance.sol": {
+			"keccak256": "0x36003f47ded8204deaffca6c11741460b84b9008c8c2eca2100a6ef6da30b395",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a5e7944271c20a9db7d9e4f50d0731a15add172707bac2d38f77902418031ebf",
+				"dweb:/ipfs/QmT2d7veXon2BkFZBseoHf8vxg4h9ZCeeYnjj36W7mqguh"
+			]
+		},
+		"contracts/registry/interface/IClaimTopicsRegistry.sol": {
+			"keccak256": "0x38b0aabb71cce9fdb7b9671d4adf0e0e49aa3d4bb7a4997cc317215557737361",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://84a76932e4443e4de6a8f957a596c0a64e7b3bf33330be91a5a9d320e58dfbf7",
+				"dweb:/ipfs/QmSNNbU7HEmHKEq9S9RRti9U3chfvcCwLQtcwiJoEbN28K"
+			]
+		},
+		"contracts/registry/interface/IIdentityRegistry.sol": {
+			"keccak256": "0xd66c0af9c2c3f158ab3f2b7786200a6c3df5307b707c1f68704a5258822d8c16",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://fda53d7c3d68780ac70403d4b3dda419a11bddbd97825d7527532303336a0e99",
+				"dweb:/ipfs/QmXRLVwiaFbqhtk9KRrEPfVrr3kWjsZZML1kv7uF92o4EB"
+			]
+		},
+		"contracts/registry/interface/IIdentityRegistryStorage.sol": {
+			"keccak256": "0xbc61e2f22ca029c5f11b96629299e84f6100c50ff6a12039ff2b48e39ab14290",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://5a8d130587c15c9b47d16bddbda1f8884b7724a1837ac88a5561e5ce24da2ab9",
+				"dweb:/ipfs/QmZ4X4FxAfCi1bMxageVHBfkFfGQ4j9wfbaWyoVCTQ8hfy"
+			]
+		},
+		"contracts/registry/interface/ITrustedIssuersRegistry.sol": {
+			"keccak256": "0x707217e46b227228e0e21be8bc21a9293a9159a6017b54078a8f58b6c77d74a0",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://8a5a0614540d3a7d23c4fc9550e69299556e9c84528abec339e2510e0317ed2e",
+				"dweb:/ipfs/QmUJ7yA7NRmnSGtvu4ePP62SrPZBVAto9RULnZjoFuApCs"
+			]
+		},
+		"contracts/token/TokenStorage.sol": {
+			"keccak256": "0xff2901f0f462201dbe0f3cf7ab9e1b5b272bceef46f7168f7534e23766bef1af",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://2af47dd54305f5a5d231d670d24328991ac6869c205152c07dcf2dd3751bf3aa",
+				"dweb:/ipfs/QmVyzuVRa2gK1EDkfs9s3wmtqJHaD1qYySUmMG7wcza8AZ"
+			]
+		}
+	},
+	"version": 1
+}

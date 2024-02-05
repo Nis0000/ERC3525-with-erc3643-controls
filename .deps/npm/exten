@@ -1,0 +1,8 @@
+/**
+ * Minified by jsDelivr using Terser v5.19.0.
+ * Original file: /npm/exten@1.4.2/index.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+var valc={};module.exports={log:o=>{console.log(o)},math:{deg2rad:o=>o*Math.PI/180,rad2deg:o=>180*o/pi,sin:o=>Math.sin(o),cos:o=>Math.cos(o),tan:o=>Math.tan(o),e:Math.E,pi:Math.PI,ln2:Math.LN2,ln10:Math.LN10,log2e:Math.LOG2E,log10e:Math.LOG10E,abs:o=>Math.abs(o),cbrt:o=>Math.cbrt(o),rndb:()=>Math.random(),rnd:o=>Math.floor(Math.random()*(o- -1)),floor:o=>Math.floor(o),sqrt:o=>Math.sqrt(o)},bol:o=>0!=o&&(1==o||"ValueError:Select 0 or 1."),define:(o,e)=>{valc[o]={},valc[o].cont=e},view:o=>null==valc[o]?"UndefinedError":valc[o].cont,typeis:o=>null==valc[o]?"UndefinedError":typeof valc[o].cont,logic:{NOT:o=>"boolean"==typeof o?!o:"ValueError:Select boolean",XOR:(o,e)=>o!=e&&("boolean"==typeof o&&"boolean"==typeof e||"ValueError:Select boolean"),AND:(o,e)=>o==e&&(typeof o==typeof e&&"boolean"==typeof o||"ValueError:Select boolean"),OR:(o,e)=>typeof o==typeof e&&"boolean"==typeof o?!(!o&&!e):"ValueError:Select boolean"},split:(o,e)=>o.split(e)};
+//# sourceMappingURL=/sm/b8d0f415af55c434833ea70c57e4bc3b3b5662ae4084fa4db263fa6d2d34bfe9.map

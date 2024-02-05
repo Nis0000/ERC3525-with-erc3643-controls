@@ -1,0 +1,237 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "OwnableInvalidOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "OwnableUnauthorizedAccount",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_agent",
+						"type": "address"
+					}
+				],
+				"name": "AgentAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_agent",
+						"type": "address"
+					}
+				],
+				"name": "AgentRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_agent",
+						"type": "address"
+					}
+				],
+				"name": "addAgent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_agent",
+						"type": "address"
+					}
+				],
+				"name": "isAgent",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_agent",
+						"type": "address"
+					}
+				],
+				"name": "removeAgent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"errors": {
+				"OwnableInvalidOwner(address)": [
+					{
+						"details": "The owner is not a valid owner account. (eg. `address(0)`)"
+					}
+				],
+				"OwnableUnauthorizedAccount(address)": [
+					{
+						"details": "The caller account is not authorized to perform an operation."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts t-rex/roles/AgentRole.sol": "AgentRole"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 10
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0x14699275e6f580c272fa15fff269c03f2c1df22507d0705ddf739129d87753fd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c960ccca3f4568fac4f47844ffdbb6e7902b926e04a14bcc432eec8377636321",
+				"dweb:/ipfs/Qma9BY76AJhM3o355eq1hiJVKgKoNYaTwSdxQF8VfJAtpw"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x889b272e9700888246793e6f9931ed4d5d9f73340e6b9800e0925fdd188e0f49",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://95fc3751ee9a51013d1793e09b11fcacd0e977fa44018527388f32f19978677b",
+				"dweb:/ipfs/QmZQLLm2qrNtm4VdWQBr2FxwjQvYfsktwFDHmKqagdXgW9"
+			]
+		},
+		"contracts t-rex/roles/AgentRole.sol": {
+			"keccak256": "0xcd21fcba9d7fbe7aa824151f3d8252e211b22ea8213cab4bc3808fe2812a5b91",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://f212dcd4d90f7e85f3943ae130f32cb509f7b77c98a6a3a060cec30fe92420dc",
+				"dweb:/ipfs/QmNVtWxfxW51EfPiB5XB99detkhTTJN6s2kEDhFy3TZZbW"
+			]
+		},
+		"contracts t-rex/roles/Roles.sol": {
+			"keccak256": "0xb69d89c5433a8f4fdfed0c175c57b0fa2e9c3d38a4f055b0106c8508d6f61191",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://317653424be944ca693bd934c21ab500eccd37eea765d4d7901f8102e736310b",
+				"dweb:/ipfs/QmXijBCZ6C8ATZY9CxFn1HvuQFuLvSbfyZCjXQ6SJkEWBc"
+			]
+		}
+	},
+	"version": 1
+}

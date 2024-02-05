@@ -1,0 +1,47 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Library for managing addresses assigned to a Role.",
+			"kind": "dev",
+			"methods": {},
+			"title": "Roles",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/roles/Roles.sol": "Roles"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/roles/Roles.sol": {
+			"keccak256": "0x9c96027cac8051782ea5df5a26cf4dc4cef5c08d7a368c82a41e25de799a5969",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://099ca2f22a6592e2ebb1b618277c86307773f7126e7e56f224d114267c64634f",
+				"dweb:/ipfs/Qme1KyAne9yCrNMQEQhh3E95ccaiGf9zySF3BiqWoSuHP5"
+			]
+		}
+	},
+	"version": 1
+}
